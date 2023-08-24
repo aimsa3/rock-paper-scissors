@@ -16,42 +16,39 @@
         function playRound(computerChoice, playerChoice) {
             let result = ""
             let tie = "It's a tie!";
-            let playerWin = "Player wins!";
-            let compWin = "Computer wins!";
 
             if (playerChoice === computerChoice) {
                 result = tie;
                 return result;
             }
             else if (playerChoice ==='rock' && computerChoice === 'paper'){
-                result = compWin;
+                result = "You lose! Paper beats rock";
                 return result;
             } 
             else if (playerChoice === 'rock' && computerChoice === 'scissors'){
-                result = playerWin;
+                result = "You win! Rock beats scissors";
                 return result;
             }
             else if (playerChoice === 'paper' && computerChoice === 'rock'){
-                result = playerWin;
+                result = "You win! paper beats rock";
                 return result;
             }
             else if (playerChoice === 'paper' && computerChoice === 'scissors'){
-                result = compWin;
+                result = "You lose! Scissors beat paper";
                 return result;
             }
             else if (playerChoice === 'scissors' && computerChoice === 'rock'){
-                result = compWin;
+                result = "You lose! Rock beats scissors";
                 return result;
             }
             else if (playerChoice === 'scissors' && computerChoice === 'paper'){
-                result = playerWin;
+                result = "You win! Scissors beat paper";
                 return result;
             }
         }
 
         const computerChoice = getComputerChoice();
         const playerChoice = prompt('Rock, paper, or scissors?').toLowerCase();
-        console.log(playerChoice);
         console.log(playRound(playerChoice, computerChoice));
     </script>
 </body>
