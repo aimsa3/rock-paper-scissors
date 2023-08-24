@@ -47,6 +47,13 @@
             }
         }
 
+        function game() {
+            let playerScore = 0;
+            let winnerScore = 0;
+            
+            playRound();
+        }
+
         const computerChoice = getComputerChoice();
         const playerChoice = prompt('Rock, paper, or scissors?').toLowerCase();
         console.log("computer: " + computerChoice);
