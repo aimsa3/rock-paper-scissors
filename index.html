@@ -9,11 +9,50 @@
     <script>
         function getComputerChoice() {
             let choices = ['rock','paper','scissors']
-            let randomChoice = Math.floor(Math.random() * 4);
+            let randomChoice = Math.floor(Math.random() * choices.length);
             return result = choices[randomChoice];
         }
 
+        function playRound(computerChoice, playerChoice) {
+            let result = ""
+            let tie = "It's a tie!";
+            let playerWin = "Player wins!";
+            let compWin = "Computer wins!";
+
+            if (playerChoice === computerChoice) {
+                result = tie;
+                return result;
+            }
+            else if (playerChoice ==='rock' && computerChoice === 'paper'){
+                result = compWin;
+                return result;
+            } 
+            else if (playerChoice === 'rock' && computerChoice === 'scissors'){
+                result = playerWin;
+                return result;
+            }
+            else if (playerChoice === 'paper' && computerChoice === 'rock'){
+                result = playerWin;
+                return result;
+            }
+            else if (playerChoice === 'paper' && computerChoice === 'scissors'){
+                result = compWin;
+                return result;
+            }
+            else if (playerChoice === 'scissors' && computerChoice === 'rock'){
+                result = compWin;
+                return result;
+            }
+            else if (playerChoice === 'scissors' && computerChoice === 'paper'){
+                result = playerWin;
+                return result;
+            }
+        }
+
         const computerChoice = getComputerChoice();
+        const playerChoice = prompt('Rock, paper, or scissors?').toLowerCase();
+        console.log(playerChoice);
+        console.log(playRound(playerChoice, computerChoice));
     </script>
 </body>
 </html>
