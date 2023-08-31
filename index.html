@@ -128,7 +128,8 @@
             playerChoice = getPlayerChoice(paperButton);
             console.log("player choice: " + playerChoice);
             console.log("computer choice: " + computerChoice);
-            playRound(playerChoice, computerChoice);
+            winner = playRound(playerChoice, computerChoice);
+            checkWinner(winner);
         })
         body.appendChild(paperButton);
 
@@ -140,7 +141,8 @@
             playerChoice = getPlayerChoice(scissorsButton);
             console.log("player choice: " + playerChoice);
             console.log("computer choice: " + computerChoice);
-            playRound(playerChoice, computerChoice);
+            winner = playRound(playerChoice, computerChoice);
+            checkWinner(winner);
         })
         body.appendChild(scissorsButton);
 
