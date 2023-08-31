@@ -105,8 +105,8 @@
         const paperButton = document.createElement('button');
         paperButton.classList.add("paper");
         paperButton.textContent = "Paper!";
-        paperButton.addEventListener('click', function(e) {
-            console.log(e);
+        paperButton.addEventListener('click', function() {
+            getPlayerChoice(paperButton);
         })
         body.appendChild(paperButton);
 
