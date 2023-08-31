@@ -90,6 +90,7 @@
 
         //plan:
         const body = document.querySelector('body');
+
         const rockButton = document.createElement('button');
         rockButton.classList.add("rock");
         rockButton.textContent = "Rock!";
@@ -97,10 +98,13 @@
             console.log(e);
         })
         body.appendChild(rockButton);
-        //add btn text
-        //add btn class
-        //append btn
-        //add listeners to each button
+        
+        const paperButton = document.createElement('button');
+        paperButton.classList.add("paper");
+        paperButton.textContent = "Paper!";
+        paperButton.addEventListener('click', function(e) {
+            console.log(e);
+        })
         //pass button choice to a play function
     </script>
 </body>
