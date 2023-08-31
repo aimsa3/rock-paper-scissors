@@ -130,7 +130,11 @@
         scissorsButton.classList.add("scissors");
         scissorsButton.textContent  = "Scissors!";
         scissorsButton.addEventListener('click', function() {
-            getPlayerChoice(scissorsButton);
+            computerChoice = getComputerChoice();
+            playerChoice = getPlayerChoice(scissorsButton);
+            console.log("player choice: " + playerChoice);
+            console.log("computer choice: " + computerChoice);
+            playRound(playerChoice, computerChoice);
         })
         body.appendChild(scissorsButton);
 
