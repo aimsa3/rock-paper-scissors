@@ -97,18 +97,22 @@
         
         //game();
 
-        //plan:
-        const body = document.querySelector('body');
-        let computerChoice = getComputerChoice;
+        let playerChoice = "";
+        let computerChoice = getComputerChoice();
 
+        const body = document.querySelector('body');
+        
         const rockButton = document.createElement('button');
         rockButton.classList.add("rock");
         rockButton.textContent = "Rock!";
         rockButton.addEventListener('click',function(){
-            getComputerChoice(rockButton)
+            playerChoice = getPlayerChoice(rockButton);
+            console.log("player choice: " + playerChoice);
+            console.log("computer choice: " + computerChoice);
+            playRound(playerChoice, computerChoice);
         })
         body.append(rockButton);
-        
+
         const paperButton = document.createElement('button');
         paperButton.classList.add("paper");
         paperButton.textContent = "Paper!";
@@ -131,7 +135,8 @@
         //pass as player choice to playround
 
         function getPlayerChoice(btn){
-            let playerChoice = btn.className;
+            playerChoice = btn.className;
+            //console.log(playerChoice);
             return playerChoice;
         }
     </script>
