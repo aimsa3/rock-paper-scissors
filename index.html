@@ -167,13 +167,24 @@
                 playerScore++;
                 console.log("p score: " + playerScore);
                 console.log("cpu score: " + compScore);
+                runningScore.textContent = `player score: ${playerScore} cpu score: ${compScore}`;
             } else if (winner == 2){
                 compScore++;
                 console.log("p score: " + playerScore);
                 console.log("cpu score: " + compScore);
+                runningScore.textContent = `player score: ${playerScore} cpu score: ${compScore}`;
             } else {
                 console.log("p score: " + playerScore);
                 console.log("cpu score: " + compScore);
+                runningScore.textContent = `player score: ${playerScore} cpu score: ${compScore}`;
+            } 
+
+            if (playerScore == 5 && playerScore > compScore){
+                resultsDisplay.textContent = "Overall winner is player";
+            } else if (compScore == 5 && compScore > playerScore) {
+                resultsDisplay.textContent = "Overall winner is computer";
+            } else {
+                resultsDisplay.textContent = "It's a tie!";
             }
         }
     </script>
