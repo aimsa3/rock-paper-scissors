@@ -61,20 +61,20 @@
             
             let computerChoice ="";
             let playerChoice = "";
-            for(i = 0; i < 5; i++){
-                computerChoice = getComputerChoice();
-                playerChoice = prompt('Rock, paper, or scissors?').toLowerCase();
+            // for(i = 0; i < 5; i++){
+            //     computerChoice = getComputerChoice();
+            //     playerChoice = prompt('Rock, paper, or scissors?').toLowerCase();
 
-                console.log("computer: " + computerChoice);
-                console.log("player: " + playerChoice);
+            //     console.log("computer: " + computerChoice);
+            //     console.log("player: " + playerChoice);
 
-                let winner = playRound(playerChoice, computerChoice);
-                if(winner == 1) {
-                    playerScore++;
-                } else if (winner == 2) {
-                    compScore++;
-                }
-            }
+            //     let winner = playRound(playerChoice, computerChoice);
+            //     if(winner == 1) {
+            //         playerScore++;
+            //     } else if (winner == 2) {
+            //         compScore++;
+            //     }
+            // }
 
             if (playerScore == compScore){
                 console.log("It's a tie");
