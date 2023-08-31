@@ -93,6 +93,9 @@
         const rockButton = document.createElement('button');
         rockButton.classList.add("rock");
         rockButton.textContent = "Rock!";
+        rockButton.addEventListener('click', function(e){
+            console.log(e);
+        })
         body.appendChild(rockButton);
         //add btn text
         //add btn class
