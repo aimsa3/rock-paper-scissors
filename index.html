@@ -98,7 +98,7 @@
         //game();
 
         let playerChoice = "";
-        let computerChoice = getComputerChoice();
+        let computerChoice = "";
 
         const body = document.querySelector('body');
         
@@ -117,7 +117,11 @@
         paperButton.classList.add("paper");
         paperButton.textContent = "Paper!";
         paperButton.addEventListener('click', function() {
-            getPlayerChoice(paperButton);
+            computerChoice = getComputerChoice();
+            playerChoice = getPlayerChoice(paperButton);
+            console.log("player choice: " + playerChoice);
+            console.log("computer choice: " + computerChoice);
+            playRound(playerChoice, computerChoice);
         })
         body.appendChild(paperButton);
 
