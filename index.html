@@ -94,9 +94,12 @@
         const rockButton = document.createElement('button');
         rockButton.classList.add("rock");
         rockButton.textContent = "Rock!";
-        rockButton.addEventListener('click', function(e){
-            console.log(e);
-        })
+        // rockButton.addEventListener('click', function(e){
+        //     console.log(e);
+        // })
+        rockButton.addEventListener('click',function(){
+            getPlayerChoice(rockButton)
+        });
         body.appendChild(rockButton);
         
         const paperButton = document.createElement('button');
@@ -119,6 +122,10 @@
         //function get player choice:
         //take class or button text?
         //pass as player choice to playround
+
+        function getPlayerChoice(btn){
+            console.log(btn.className);
+        }
     </script>
 </body>
 </html>
