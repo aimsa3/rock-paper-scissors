@@ -106,6 +106,7 @@
         rockButton.classList.add("rock");
         rockButton.textContent = "Rock!";
         rockButton.addEventListener('click',function(){
+            computerChoice = getComputerChoice();
             playerChoice = getPlayerChoice(rockButton);
             console.log("player choice: " + playerChoice);
             console.log("computer choice: " + computerChoice);
