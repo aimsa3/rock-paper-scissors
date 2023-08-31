@@ -105,6 +105,7 @@
         let winner = "";
 
         const body = document.querySelector('body');
+        const buttons = document.querySelectorAll('button');
         
         const rockButton = document.createElement('button');
         rockButton.classList.add("rock");
@@ -179,12 +180,18 @@
                 runningScore.textContent = `player score: ${playerScore} cpu score: ${compScore}`;
             } 
 
-            if (playerScore == 5 && playerScore > compScore){
+            if (playerScore == 5) {//&& playerScore > compScore){
                 resultsDisplay.textContent = "Overall winner is player";
-            } else if (compScore == 5 && compScore > playerScore) {
+                playerScore = 0;
+                compScore = 0;
+            } else if (compScore == 5) {// && compScore > playerScore) {
                 resultsDisplay.textContent = "Overall winner is computer";
-            } else {
+                playerScore = 0;
+                compScore = 0;
+            } else if (playerScore == 5){//&& compScore == 5) {
                 resultsDisplay.textContent = "It's a tie!";
+                playerScore = 0;
+                compScore = 0;
             }
         }
     </script>
