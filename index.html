@@ -151,6 +151,11 @@
         resultsContainer.appendChild(resultsDisplay);
         body.appendChild(resultsContainer);
 
+
+        const runningScore = document.createElement('p');
+        runningScore.classList.add('running-score');
+        resultsContainer.appendChild(runningScore);
+
         function getPlayerChoice(btn){
             playerChoice = btn.className;
             //console.log(playerChoice);
