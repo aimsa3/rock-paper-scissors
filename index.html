@@ -100,6 +100,9 @@
 
         let playerChoice = "";
         let computerChoice = "";
+        let playerScore = 0;
+        let compScore = 0;
+        let winner = "";
 
         const body = document.querySelector('body');
         
@@ -111,7 +114,19 @@
             playerChoice = getPlayerChoice(rockButton);
             console.log("player choice: " + playerChoice);
             console.log("computer choice: " + computerChoice);
-            playRound(playerChoice, computerChoice);
+            winner = playRound(playerChoice, computerChoice);
+            if (winner == 1) {
+                playerScore++;
+                console.log("p score: " + playerScore);
+                console.log("cpu score: " + compScore);
+            } else if (winner == 2){
+                compScore++;
+                console.log("p score: " + playerScore);
+                console.log("cpu score: " + compScore);
+            } else {
+                console.log("p score: " + playerScore);
+                console.log("cpu score: " + compScore);
+            }
         })
         body.append(rockButton);
 
