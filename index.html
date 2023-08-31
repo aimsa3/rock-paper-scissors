@@ -113,8 +113,8 @@
         const scissorsButton = document.createElement('button');
         scissorsButton.classList.add("scissors");
         scissorsButton.textContent  = "Scissors!";
-        scissorsButton.addEventListener('click', function(e) {
-            console.log(e);
+        scissorsButton.addEventListener('click', function() {
+            getPlayerChoice(scissorsButton);
         })
         body.appendChild(scissorsButton);
 
