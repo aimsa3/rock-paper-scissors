@@ -115,18 +115,7 @@
             console.log("player choice: " + playerChoice);
             console.log("computer choice: " + computerChoice);
             winner = playRound(playerChoice, computerChoice);
-            if (winner == 1) {
-                playerScore++;
-                console.log("p score: " + playerScore);
-                console.log("cpu score: " + compScore);
-            } else if (winner == 2){
-                compScore++;
-                console.log("p score: " + playerScore);
-                console.log("cpu score: " + compScore);
-            } else {
-                console.log("p score: " + playerScore);
-                console.log("cpu score: " + compScore);
-            }
+            checkWinner(winner);
         })
         body.append(rockButton);
 
@@ -166,6 +155,21 @@
             playerChoice = btn.className;
             //console.log(playerChoice);
             return playerChoice;
+        }
+
+        function checkWinner(winner){
+            if (winner == 1) {
+                playerScore++;
+                console.log("p score: " + playerScore);
+                console.log("cpu score: " + compScore);
+            } else if (winner == 2){
+                compScore++;
+                console.log("p score: " + playerScore);
+                console.log("cpu score: " + compScore);
+            } else {
+                console.log("p score: " + playerScore);
+                console.log("cpu score: " + compScore);
+            }
         }
     </script>
 </body>
