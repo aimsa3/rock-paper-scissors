@@ -78,10 +78,13 @@
 
             if (playerScore == compScore){
                 console.log("It's a tie");
+                resultsDisplay.textContent = "It's a tie";
             } else if (playerScore > compScore){
                 console.log("You win");
+                resultsDisplay.textContent = "You win";
             } else {
                 console.log("You lose");
+                resultsDisplay.textContent = "You lose";
             }
         }
 
