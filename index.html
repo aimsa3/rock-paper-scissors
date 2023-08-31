@@ -106,6 +106,15 @@
             console.log(e);
         })
         body.appendChild(paperButton);
+
+        const scissorsButton = document.createElement('button');
+        scissorsButton.classList.add("scissors");
+        scissorsButton.textContent  = "Scissors!";
+        scissorsButton.addEventListener('click', function(e) {
+            console.log(e);
+        })
+        body.appendChild(scissorsButton);
+        
         //pass button choice to a play function
     </script>
 </body>
