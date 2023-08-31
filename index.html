@@ -139,10 +139,13 @@
         })
         body.appendChild(scissorsButton);
 
-        const resultsDisplay = document.createElement('div');
-        resultsDisplay.classList.add('results');
-        body.append(resultsDisplay);
-        //pass as player choice to playround
+        const resultsContainer = document.createElement('div');
+        resultsContainer.classList.add('results');
+
+        const resultsDisplay = document.createElement('p');
+        resultsDisplay.classList.add('display');
+        resultsContainer.appendChild(resultsDisplay);
+        body.appendChild(resultsContainer);
 
         function getPlayerChoice(btn){
             playerChoice = btn.className;
