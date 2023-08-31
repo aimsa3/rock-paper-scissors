@@ -89,7 +89,11 @@
         //game();
 
         //plan:
-        //create each button with js
+        const body = document.querySelector('body');
+        const rockButton = document.createElement('button');
+        rockButton.classList.add("rock");
+        rockButton.textContent = "Rock!";
+        body.appendChild(rockButton);
         //add btn text
         //add btn class
         //append btn
