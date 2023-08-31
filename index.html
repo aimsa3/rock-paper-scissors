@@ -99,14 +99,15 @@
 
         //plan:
         const body = document.querySelector('body');
+        let computerChoice = getComputerChoice;
 
         const rockButton = document.createElement('button');
         rockButton.classList.add("rock");
         rockButton.textContent = "Rock!";
         rockButton.addEventListener('click',function(){
-            getPlayerChoice(rockButton)
-        });
-        body.appendChild(rockButton);
+            getComputerChoice(rockButton)
+        })
+        body.append(rockButton);
         
         const paperButton = document.createElement('button');
         paperButton.classList.add("paper");
@@ -126,6 +127,7 @@
 
         const resultsDisplay = document.createElement('div');
         resultsDisplay.classList.add('results');
+        body.append(resultsDisplay);
         //pass as player choice to playround
 
         function getPlayerChoice(btn){
