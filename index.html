@@ -22,6 +22,7 @@
             if (playerChoice == computerChoice) {
                 result = tie;
                 console.log(result);
+                resultsDisplay.textContent = result;
                 return 0;
             }
             else if (playerChoice =='rock' && computerChoice == 'paper'){
@@ -82,7 +83,8 @@
             //         compScore++;
             //     }
             // }
-
+            
+            //replace choice buttons with restart button
             if (playerScore == compScore){
                 console.log("It's a tie");
                 resultsDisplay.textContent = "It's a tie";
